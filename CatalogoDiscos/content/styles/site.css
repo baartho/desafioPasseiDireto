@@ -1,0 +1,79 @@
+﻿legend{
+    font-size: xx-large;
+}
+
+table{
+	width: 100%;
+	border-width: 1px;
+}
+
+td{
+	padding: 5px;
+}
+
+/*Diminuir o padding e margin em tablets e smartphones*/ 
+@media (max-width: 978px) {
+    .container {
+      padding:10px;
+      margin:0;
+    }
+
+    body {
+      padding:0;
+    }
+
+    .navbar-fixed-top, .navbar-fixed-bottom, .navbar-static-top {
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom:0;
+    }
+}
+/*Diminuir o padding e margin em tablets e smartphones*/ 
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.align-right{
+    text-align: right;
+}
+
+.nowrap{
+	white-space: nowrap;
+}
+
+/*Truncar texto de tabela*/
+
+table .truncate-text > div{
+	position: relative;
+	overflow: hidden;
+	height: 1em;
+}
+
+table .truncate-text > div > span{
+	display: block;
+	position: absolute;	
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 1em;
+}
+
+table .truncate-text > div:after{
+	content: attr(title);
+	overflow: hidden;
+	height: 0;
+	display: block;
+}
+
+/*Truncar texto de tabela*/
+
+.remove-padding-left{
+    padding-left: 0px;
+}
+
+.breadcrumb{
+    background-color: #fff;
+}
