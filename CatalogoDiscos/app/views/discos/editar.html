@@ -1,0 +1,79 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Editar Disco</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/content/plugins/selectize/selectize.bootstrap3.css" />
+    <link rel="stylesheet" href="/content/styles/site.css" />
+</head>
+<body>
+    <div class="container">
+        <form class="form-horizontal" id="form" ng-app="discoService" ng-controller="discoController" data-ng-init="getDisco()"> 
+            <fieldset>
+                <legend>Editar Disco</legend>
+
+                <ol class="breadcrumb">
+                    <li><a href="/">Home</a></li>
+                    <li class="active">Editar</li>
+                </ol>
+
+                <input id="id" ng-model="disco._id" type="text" style="display:none" required="">
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="artista">Artista</label>
+                    <div class="col-md-5">
+                        <input id="artista" ng-model="disco.artista.nome" name="artista" type="text" placeholder="Artista" class="form-control input-md" required="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="titulo">Título</label>
+                    <div class="col-md-5">
+                        <input id="titulo" ng-model="disco.titulo" name="titulo" type="text" placeholder="Título do Disco" class="form-control input-md" required="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="descricao">Descrição</label>
+                    <div class="col-md-5">
+                        <textarea ng-model="disco.descricao" class="form-control" id="descricao" name="descricao" placeholder="Descrição"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="ano_lancamento">Ano de Lançamento</label>
+                    <div class="col-md-5">
+                        <input id="ano_lancamento" ng-model="disco.ano_lancamento" name="ano_lancamento" type="number" 
+                               placeholder="Ano de Lançamento do Disco" class="form-control input-md" required="">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="genero">Gêneros</label>
+                    <div class="col-md-5">
+                        <input id="genero" ng-model="disco.genero.nome" name="genero" type="text" placeholder="Gêneros" class="form-control input-md">
+                        <!--<span class="help-block">Preencha um ou mais gêneros.</span>-->
+                    </div>
+                </div>
+
+                <div class="col-md-7 text-right">
+                    <a class="btn btn-default" href="/discos">Cancelar</a>
+                    <button ng-click="updateDisco()" class="btn btn-primary">Atualizar</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+    <script src="/content/plugins/common/jquery.validate.extension.js"></script>
+    <script src="/app/services/discoService.js"></script>
+    <script src="/app/controllers/discoController.js"></script>
+    <script src="/content/plugins/selectize/selectize.min.js"></script>
+    <script src="/content/scripts/forViews/discos/criar.js"></script>
+</body>
+</html>
