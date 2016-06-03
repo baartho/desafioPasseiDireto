@@ -1,0 +1,16 @@
+{
+  "name": "CatalogoDiscos",
+  "version": "0.0.0",
+  "description": "CatalogoDiscos",
+  "main": "server.js",
+  "author": {
+    "name": "Bartho",
+    "email": ""
+  },
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "elasticsearch": "^11.0.1",
+    "express": "^4.13.4",
+    "mongoose": "^4.4.17"
+  }
+}
